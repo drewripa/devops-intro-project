@@ -11,7 +11,7 @@ set -e
 plugin_list="build-pipeline-plugin git github ghprb"
 
 plugin_dir=/var/lib/jenkins/plugins
-file_owner=jenkins.jenkins
+file_owner=jenkins:jenkins
  
 mkdir -p /var/lib/jenkins/plugins
  
@@ -56,8 +56,42 @@ while [ "$changed"  == "1" ]; do
   done
 done
  
+echo "=================================================================================="
+echo "#                                                                                # "
+echo "#                                                                                # "
+echo "#                                                                                # "
+echo "#                                                                                # "
+echo "#                                                                                # "
+echo "#                                                                                # "
+echo "#                                                                                # "
 echo "fixing permissions"
+
+echo "#                                                                                # "
+echo "#                                                                                # "
+echo "#                                                                                # "
+echo "#                                                                                # "
+echo "#                                                                                # "
+echo "#                                                                                # "
+echo "#                                                                                # "
+echo "=================================================================================="
  
 chown ${file_owner} ${plugin_dir} -R
  
-echo "all done"
+echo "=================================================================================="
+echo "#                                                                                # "
+echo "#                                                                                # "
+echo "#                                                                                # "
+echo "#                                                                                # "
+echo "#                                                                                # "
+echo "#                                                                                # "
+echo "#                                                                                # "
+echo " All done"
+
+echo "#                                                                                # "
+echo "#                                                                                # "
+echo "#                                                                                # "
+echo "#                                                                                # "
+echo "#                                                                                # "
+echo "#                                                                                # "
+echo "#                                                                                # "
+echo "=================================================================================="
