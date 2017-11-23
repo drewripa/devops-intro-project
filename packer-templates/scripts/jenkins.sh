@@ -10,13 +10,33 @@ sudo adduser jenkins --disabled-password
 apt-get install -y software-properties-common
 add-apt-repository -y ppa:openjdk-r/ppa
 apt-get update
-apt-get install -y openjdk-8-jre openjdk-8-jdk unzip dos2unix
+apt-get install -y openjdk-8-jre openjdk-8-jdk openjdk-8-jre-headless unzip dos2unix
 
-wget -q -O - https://jenkins-ci.org/debian/jenkins-ci.org.key | apt-key add -
-echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list
+wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
+echo deb https://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list
 
 apt-get update
-apt-get install -y jenkins
+sudo apt-get install -y jenkins
+
+echo "=================================================================================="
+echo "#                                                                                # "
+echo "#                                                                                # "
+echo "#                                                                                # "
+echo "#                                                                                # "
+echo "#                                                                                # "
+echo "#                                                                                # "
+echo "#                                                                                # "
+echo 	`sudo jenkins service status`
+
+echo "#                                                                                # "
+echo "#                                                                                # "
+echo "#                                                                                # "
+echo "#                                                                                # "
+echo "#                                                                                # "
+echo "#                                                                                # "
+echo "#                                                                                # "
+echo "=================================================================================="
+
 
 echo "=================================================================================="
 echo "#                                                                                # "
